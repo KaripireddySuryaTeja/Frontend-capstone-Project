@@ -1468,7 +1468,7 @@ body {
     All your other images use https:// links. 
     You may want to replace this with a full https:// URL.
   */
-  background: url('assets/images/home/top-rated-hotels-Background.png') lightgray center/cover no-repeat, #FFF0EC;
+  background: url('src/top-rated-hotels-Background.png') lightgray center/cover no-repeat, #FFF0EC;
   
   padding: 5rem 1rem;
 }
@@ -3464,3 +3464,4 @@ body {
         height: 54px;
     }
 }
+
