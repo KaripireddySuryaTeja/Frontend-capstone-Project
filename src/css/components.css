@@ -1,0 +1,3466 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================ */
+/* Site Header                  */
+/* ============================ */
+
+.site-header {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #f2f4f6;
+    /* Sticky & Auto-hide logic */
+    transition: top 0.3s ease-in-out;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+/* --- Top Promo Banner --- */
+/* ============================ */
+/* Site Header                  */
+/* ============================ */
+
+.site-header {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #f2f4f6;
+    /* Sticky & Auto-hide logic */
+    transition: top 0.3s ease-in-out;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* --- Top Promo Banner (RENAMED) --- */
+.top-promo-banner { /* <-- RENAMED */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrap on small screens */
+    gap: 0.5rem 1rem; /* Reduced gap for a tighter look */
+    background: #000;
+    color: #fff;
+    padding: 0.1rem 0.75rem;
+    text-align: center;
+    line-height: 2;
+    /* max-height: 35px; */ /* We don't even need this anymore */
+}
+
+
+.top-promo-text { /* <-- RENAMED */
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem; /* Reduced from 0.875rem (14px) to 0.8rem (12.8px) */
+    line-height: 1.4; /* Adjusted line height */
+}
+
+.top-promo-link { /* <-- RENAMED */
+    display: flex;
+    align-items: center;
+    gap: 0.2rem; /* Slightly reduced gap */
+    color: #f09814;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem; /* Reduced from 0.875rem to 0.8rem */
+    text-decoration: none;
+    transition: gap 0.2s ease;
+}
+
+.top-promo-content { /* <-- RENAMED */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* 8px */
+}
+
+.top-promo-icon { /* <-- RENAMED */
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+
+.top-promo-link:hover { /* <-- RENAMED */
+    gap: 0.5rem; /* Move arrow slightly on hover */
+}
+
+.top-promo-arrow { /* <-- RENAMED */
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* --- Main Navigation Bar --- */
+.main-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px; /* From original CSS */
+    padding: 0 2.5rem; /* 40px horizontal padding */
+    background: #fff;
+}
+
+/* ... (rest of .main-nav-container and its children styles remain the same) ... */
+.main-logo {
+    display: block;
+    flex-shrink: 0;
+}
+/* ... etc ... */
+
+/* ================================= */
+/* --- Desktop Styles & Auto-Hide ---*/
+/* ================================= */
+
+@media (min-width: 1024px) {
+    /* ... (other styles remain the same) ... */
+    
+    /* Auto-hide class - ADJUSTED */
+    .site-header--hidden {
+        /* This value must be the exact height of your header */
+        /* ~30px (new promo) + 62px (nav) = ~92px */
+        top: -92px; 
+    }
+}
+/* ... (rest of the header CSS remains the same) ... */
+.promo-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrap on small screens */
+    gap: 0.5rem 1rem; /* Reduced gap for a tighter look */
+    background: #000;
+    color: #fff;
+    padding: 0.3rem 1rem; /* small padding */
+    text-align: center;
+    max-height: 35px; /* <-- ADD THIS LINE */
+}
+.promo-text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem; /* Reduced from 0.875rem (14px) to 0.8rem (12.8px) */
+    line-height: 1.4; /* Adjusted line height */
+}
+
+.promo-link {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem; /* Slightly reduced gap */
+    color: #f09814;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem; /* Reduced from 0.875rem to 0.8rem */
+    text-decoration: none;
+    transition: gap 0.2s ease;
+}
+
+.promo-banner-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* 8px */
+}
+
+.banner-icon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+
+.promo-link:hover {
+    gap: 0.5rem; /* Move arrow slightly on hover */
+}
+
+.banner-arrow {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+/* --- Main Navigation Bar --- */
+.main-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px; /* From original CSS */
+    padding: 0 2.5rem; /* 40px horizontal padding */
+    background: #fff;
+}
+
+.main-logo {
+    display: block;
+    flex-shrink: 0;
+}
+
+.main-logo .logo {
+    width: 134px;
+    height: 36px;
+    display: block;
+}
+
+/* --- Navigation Links --- */
+.nav-links {
+    display: none; /* Hidden on mobile by default */
+}
+
+.nav-links ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem; /* 16px */
+}
+
+.nav-links li a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* 8px */
+    padding: 1.25rem 0.5rem; /* 20px 8px */
+    text-decoration: none;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem; /* 14px */
+    color: #000;
+    white-space: nowrap;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-links li a:hover {
+    color: #333;
+    border-bottom-color: #fefa17;
+}
+
+.nav-arrow-icon {
+    width: 10px;
+    height: 10px;
+    opacity: 0.6;
+}
+
+/* --- Right-side Controls --- */
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* 16px */
+}
+
+.lang-select,
+.currency-select {
+    display: none; /* Hidden on mobile */
+    align-items: center;
+    gap: 0.25rem;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem; /* 14px */
+    color: #000;
+    cursor: pointer;
+}
+.lang-icon { width: 24px; height: 24px; }
+.lang-arrow, .currency-arrow { width: 16px; height: 16px; }
+
+.theme-toggle {
+    display: none; /* Hidden on mobile */
+    justify-content: center;
+    align-items: center;
+    width: 48px;  /* 62px - 14px padding */
+    height: 48px; /* 62px - 14px padding */
+    padding: 0.75rem; /* 12px */
+    border-radius: 50px;
+    background: #f2f4f6;
+    border: none;
+    cursor: pointer;
+}
+.theme-icon { width: 24px; height: 24px; }
+
+.signin-btn {
+    display: none; /* Hidden on mobile */
+    padding: 0.75rem 1.25rem; /* 12px 19px */
+    border-radius: 38px;
+    border: 1px solid #e4e6e8;
+    background: #fff;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 1rem; /* 16px */
+    color: #000;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.signin-btn:hover {
+    background: #f2f4f6;
+}
+
+.menu-btn {
+    display: flex; /* Visible on mobile */
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 4px;
+    background: #fefa17;
+    border: none;
+    cursor: pointer;
+}
+.menu-icon { width: 24px; height: 24px; }
+
+
+/* ================================= */
+/* --- Desktop Styles & Auto-Hide ---*/
+/* ================================= */
+
+@media (min-width: 1024px) {
+    /* Show desktop nav, hide mobile button */
+    .nav-links { display: block; }
+    .menu-btn { display: none; }
+
+    /* Show desktop controls */
+    .lang-select,
+    .currency-select,
+    .theme-toggle,
+    .signin-btn {
+        display: flex;
+    }
+    
+    /* Center the nav links */
+    .main-nav-container {
+        justify-content: space-between;
+    }
+    .nav-links {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Auto-hide class */
+    .site-header--hidden {
+        /* Total height of promo (46px) + nav (62px) = 108px */
+        top: -90px; 
+    }
+}
+
+@media (max-width: 1023px) {
+    /* On mobile, center the logo when nav links are hidden */
+    .main-nav-container {
+        justify-content: space-between;
+    }
+}
+
+/* ============================ */
+/* body Section                */
+/* ============================ */
+
+body {
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.hero-section {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.hero-background {
+  width: 100%;background: url('src/css/Home-Background.png') lightgray center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  padding: 2rem 1rem 20rem;
+  min-height: 500px;
+}
+
+.hero-container {
+  max-width: 1248px;
+  top: -5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 986px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0.8125rem 1.4375rem;
+
+  background: #FEFA17;
+  border-radius: 50px;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+}
+
+.hero-title {
+  color: #000;
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 4.75rem;
+  margin: 0;
+}
+
+.hero-subtitle {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2rem;
+  max-width: 1100px;
+  margin: 0;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.carousel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #E4E6E8;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background: #d0d2d4;
+}
+
+.thumbnail-gallery {
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 247px;
+}
+
+.thumbnail-item {
+  border-radius: 1rem;
+  border: 3px solid #fff;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.thumbnail-item.active {
+  border-color: #FEFA17;
+}
+
+.thumbnail-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 241/156;
+  object-fit: cover;
+}
+
+.booking-panel {
+  width: 100%;
+  
+  max-width: calc(100% - 25rem);
+  margin: -12rem auto 0;
+  background: #fff;
+  border-radius: 1rem;
+  border: 1px solid #E4E6E8;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.booking-tabs {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.8125rem 1.8125rem 1rem;
+  border-bottom: 1px solid #E4E6E8;
+  flex-wrap: wrap;
+}
+
+.tab-link {
+  background: none;
+  border: none;
+  color: #000;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem 1.125rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.tab-link.active {
+  background: #000;
+  color: #fff;
+}
+
+.tab-link:hover:not(.active) {
+  background: #f5f5f5;
+}
+
+.help-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #737373;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.help-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+.booking-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0;
+  padding: 1.5rem;
+  align-items: end;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 1rem;
+}
+
+.field-label {
+  color: #737373;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.375rem;
+}
+
+.field-input {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.field-input svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.field-select {
+  border: none;
+  background: transparent;
+  color: #000;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.375rem;
+  cursor: pointer;
+  outline: none;
+  flex: 1;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 1.5rem;
+}
+
+.form-divider {
+  width: 1px;
+  height: 58px;
+  background: #E4E6E8;
+  align-self: end;
+  display: none;
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 1rem 2rem;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+  grid-column: -2 / -1;
+}
+
+.search-btn:hover {
+  background: #333;
+}
+
+.search-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 768px) {
+  .hero-background {
+    padding: 3rem 2rem 20rem;
+  }
+  
+  .booking-form {
+    grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr auto;
+    gap: 0;
+  }
+  
+  .form-divider {
+    display: block;
+  }
+  
+  .search-btn {
+    grid-column: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-background {
+    padding: 8.5rem 21rem 20.3125rem;
+  }
+  
+  .hero-container {
+    padding: 8.5rem 15.625rem 0 0.75rem;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .thumbnail-gallery {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-background {
+    padding: 2rem 1rem 15rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+  
+  .booking-panel {
+    margin-top: -8rem;
+  }
+  
+  .booking-tabs {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+  
+  .help-link {
+    width: 100%;
+    margin-left: 0;
+    justify-content: center;
+  }
+  
+  .booking-form {
+    padding: 1rem;
+    grid-template-columns: 1fr;
+  }
+  
+  .form-field {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #E4E6E8;
+  }
+  
+  .form-field:last-of-type {
+    border-bottom: none;
+  }
+  
+  .search-btn {
+    margin-top: 1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .badge {
+    font-size: 0.875rem;
+    padding: 0.625rem 1.125rem;
+  }
+}
+
+
+/* ============================ */
+/* Tour Categories Section      */
+/* ============================ */
+
+.tour-categories-section {
+  display: flex;
+  width: 100%;
+  padding: 4rem 1rem 6rem; /* Top padding, horiz padding, bottom padding */
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+.tour-categories-container {
+  max-width: 1248px; /* Consistent max-width */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center grid horizontally */
+  gap: 3rem; /* Space between header and grid */
+}
+
+.tour-categories-header {
+  display: flex;
+  justify-content: space-between; /* Space title/subtitle from button */
+  align-items: flex-start; /* Align items to the top */
+  width: 100%;
+  gap: 2rem; /* Gap between text and button */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.tour-categories-text {
+  flex: 1; /* Allow text block to grow */
+  min-width: 280px; /* Prevent text block from getting too small */
+}
+
+.tour-categories-title {
+  font-family: Manrope, sans-serif;
+  font-weight: 800;
+  font-size: 3.25rem; /* Match other section titles */
+  color: #000;
+  line-height: 1.4;
+  margin: 0 0 0.5rem 0; /* Margin below title */
+}
+
+.tour-categories-subtitle {
+  font-family: Manrope, sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem; /* Match other subtitles */
+  color: #737373;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.view-more-btn {
+  display: inline-flex; /* Use inline-flex */
+  padding: 0.8125rem 1.4375rem; /* 13px 23px */
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem; /* 12px */
+  border-radius: 50px;
+  background: #000;
+  color: #fff;
+  font-family: Manrope, sans-serif;
+  font-weight: 700;
+  font-size: 1rem; /* 16px */
+  line-height: 1.625; /* 26px */
+  text-decoration: none;
+  white-space: nowrap; /* Prevent button text wrapping */
+  transition: background-color 0.3s ease, gap 0.2s ease;
+  cursor: pointer;
+  margin-top: 0.5rem; /* Align better with title */
+}
+
+.view-more-btn:hover {
+    background: #333;
+    gap: 1rem;
+}
+
+.arrow-icon-white {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.category-cards-grid {
+  display: grid;
+  /* 4 columns, auto-fitting, min width 250px, max 1fr */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem; /* 24px */
+  width: 100%;
+}
+
+.category-card {
+  border-radius: 24px;
+  border: 1px solid #e4e6e8;
+  background: #fff;
+  position: relative; /* For positioning the arrow */
+  padding: 1rem; /* 16px padding inside card */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* Space between elements inside card */
+  text-decoration: none; /* If card itself is a link */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.category-card-image-container {
+  width: 100%;
+  aspect-ratio: 256 / 114; /* Maintain image aspect ratio */
+  border-radius: 20px;
+  overflow: hidden; /* Ensure image stays within rounded corners */
+}
+
+.category-card-image {
+  display: block; /* Remove extra space below image */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the container */
+}
+
+.category-card-title {
+  font-family: Manrope, sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem; /* 18px */
+  color: #000;
+  line-height: 1.55; /* 28px */
+  margin: 0; /* Remove default margin */
+}
+
+.category-card-description {
+  font-family: Manrope, sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem; /* 14px */
+  color: #737373;
+  line-height: 1.57; /* 22px */
+  margin: 0 0 1.5rem 0; /* Add margin below description to push arrow down */
+}
+
+.category-card-arrow {
+  display: flex; /* Make it a flex container */
+  width: 27px;
+  height: 27px;
+  padding: 0.5rem; /* ~8px padding */
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* Make it circular */
+  background: #f2f4f6;
+  position: absolute; /* Position relative to card */
+  right: 1rem; /* 16px from right */
+  bottom: 1rem; /* 16px from bottom */
+  transition: background-color 0.3s ease;
+}
+
+.category-card-arrow:hover {
+    background-color: #e4e6e8;
+}
+
+.small-arrow-icon {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+
+/* --- Responsive Adjustments for Tour Categories --- */
+
+@media (max-width: 1024px) {
+    .tour-categories-title {
+        font-size: 2.5rem; /* Adjust title size */
+    }
+    .tour-categories-subtitle {
+        font-size: 1.125rem; /* Adjust subtitle size */
+    }
+    .category-cards-grid {
+        /* Ensure at least 2 columns if space allows */
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .tour-categories-section {
+        padding: 3rem 1rem 4rem; /* Adjust padding */
+    }
+     .tour-categories-header {
+        flex-direction: column; /* Stack header elements */
+        align-items: center; /* Center header elements */
+        text-align: center;
+    }
+    .view-more-btn {
+        margin-top: 1rem; /* Add space above button when stacked */
+    }
+     .category-cards-grid {
+        gap: 1rem; /* Reduce gap */
+    }
+}
+
+@media (max-width: 480px) {
+     .tour-categories-title {
+        font-size: 2rem; /* Further adjust title size */
+    }
+     .tour-categories-subtitle {
+        font-size: 1rem; /* Further adjust subtitle size */
+    }
+    .category-cards-grid {
+       /* Ensure min width allows for almost full width card */
+       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .category-card-title {
+        font-size: 1rem; /* Adjust card title */
+    }
+}
+
+/*featured Tours Section*/
+.featured-tours {
+  width: 100%;
+  background: #fff;
+  padding: 4rem 1rem;
+}
+
+.tours-container {
+  max-width: 1248px;
+  margin: 0 auto;
+}
+
+.tours-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.tours-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.tours-title {
+  color: #000;
+  font-size: 3.25rem;
+  font-weight: 800;
+  line-height: 4.75rem;
+  margin: 0 0 0.5rem;
+}
+
+.tours-subtitle {
+  color: #737373;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 2rem;
+  margin: 0;
+}
+
+.tours-filters {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5625rem 1.1875rem;
+  background: #E4E6E8;
+  border: 1px solid #E4E6E8;
+  border-radius: 50px;
+  color: #000;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: #d0d2d4;
+  border-color: #d0d2d4;
+}
+
+.filter-btn svg {
+  width: 11px;
+  height: 10px;
+}
+
+.tours-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.tour-card {
+  background: #fff;
+  border: 1px solid #E4E6E8;
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.tour-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 407/326;
+  overflow: hidden;
+}
+
+.tour-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tour-badge {
+  position: absolute;
+  top: 1.375rem;
+  left: 1.5625rem;
+  padding: 0.3125rem 1.375rem;
+  background: #fff;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.375rem;
+}
+
+.tour-badge.top-rated {
+  color: #F09814;
+}
+
+.tour-badge.best-sale {
+  color: #3DC262;
+}
+
+.tour-badge.discount {
+  color: #F09814;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5625rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.82);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.favorite-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+.favorite-btn svg {
+  width: 20px;
+  height: 18px;
+}
+
+.tour-content {
+  padding: 2rem;
+  position: relative;
+}
+
+.tour-rating {
+  position: absolute;
+  top: -1.125rem;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 0.8125rem;
+  background: #fff;
+  border: 1px solid #E4E6E8;
+  border-radius: 50px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.07);
+}
+
+.tour-rating svg {
+  width: 12px;
+  height: 12px;
+}
+
+.rating-value {
+  color: #000;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.375rem;
+}
+
+.rating-count {
+  color: #737373;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.375rem;
+}
+
+.tour-content .tour-title {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 2rem;
+  margin: 1.5rem 0 1rem;
+}
+
+.tour-meta {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #737373;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.625rem;
+}
+
+.meta-item svg {
+  width: 16px;
+  height: 16px;
+}
+
+.tour-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.tour-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.price-amount {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 2rem;
+}
+
+.price-label {
+  color: #737373;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.625rem;
+}
+
+.book-btn {
+  padding: 0.5625rem 1.1875rem;
+  background: #F2F4F6;
+  border: 1px solid #E4E6E8;
+  border-radius: 50px;
+  color: #000;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.375rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+@media (min-width: 768px) {
+  .tours-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .tours-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .featured-tours {
+    padding: 6rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tours-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .tours-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .tours-header {
+    margin-bottom: 2rem;
+  }
+
+  .tours-filters {
+    width: 100%;
+  }
+
+  .filter-btn {
+    flex: 1;
+    min-width: 120px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .tours-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .tours-subtitle {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .tours-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tour-content .tour-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
+  }
+}
+
+.promotional-banners {
+  width: 100%;
+  background: #fff;
+  padding: 2rem 1rem 4rem;
+}
+
+.banners-container {
+  max-width: 1248px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.promo-banner {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  min-height: 306px;
+  display: flex;
+  align-items: flex-start;
+  padding: 2.5rem 2.25rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.promo-banner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.banner-cyan {
+  background: linear-gradient(135deg, #A8E6FF 0%, #6DD5FA 100%);
+}
+
+.banner-white {
+  background: #f5f5f5;
+}
+
+.banner-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  z-index: 0;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 60%;
+}
+
+.banner-title {
+  color: #000;
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 3rem;
+  margin: 0;
+}
+
+.banner-white .banner-title {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+}
+
+.banner-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.8125rem 1.4375rem;
+  background: #FEFA17;
+  border-radius: 50px;
+  color: #000;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+  text-decoration: none;
+  width: fit-content;
+  transition: all 0.3s ease;
+}
+
+.banner-link:hover {
+  background: #e5e100;
+  transform: translateX(4px);
+}
+
+.banner-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (min-width: 768px) {
+  .banners-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .promotional-banners {
+    padding: 3rem 2rem 5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .promo-banner {
+    min-height: 250px;
+    padding: 2rem 1.5rem;
+  }
+
+  .banner-content {
+    max-width: 55%;
+  }
+
+  .banner-title {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+
+  .banner-white .banner-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .banner-image {
+    width: 65%;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-banner {
+    min-height: 200px;
+    padding: 1.5rem 1rem;
+  }
+
+  .banner-content {
+    max-width: 50%;
+  }
+
+  .banner-title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .banner-white .banner-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .banner-link {
+    padding: 0.625rem 1.125rem;
+    font-size: 0.875rem;
+    gap: 0.5rem;
+  }
+
+  .banner-link svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.top-rated-hotels{
+  width: 100%;
+  
+  /* NOTE: This local path 'assets/images/home/top-rated-hotels-Background.png' 
+    will not work unless you have this image at this exact location in your project.
+    All your other images use https:// links. 
+    You may want to replace this with a full https:// URL.
+  */
+  background: url('assets/images/home/top-rated-hotels-Background.png') lightgray center/cover no-repeat, #FFF0EC;
+  
+  padding: 5rem 1rem;
+}
+
+.hotels-container {
+  max-width: 1248px;
+  margin: 0 auto;
+}
+
+.hotels-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hotels-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hotels-title {
+  color: #000;
+  font-size: 3.25rem;
+  font-weight: 800;
+  line-height: 4.75rem;
+  margin: 0 0 0.5rem;
+}
+
+.hotels-subtitle {
+  color: #737373;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 2rem;
+  margin: 0;
+}
+
+.hotels-carousel-controls {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.hotels-carousel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #E4E6E8;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hotels-carousel-btn:hover {
+  background: #d0d2d4;
+}
+
+.hotels-carousel-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.hotels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  padding-bottom: 5rem;
+}
+
+.hotel-card {
+  /* This width: 25rem; might be too restrictive. 
+     I'm leaving it since you said not to change classes,
+     but 'repeat(auto-fit, minmax(320px, 1fr))' on the grid 
+     already handles sizing. You could probably remove this width.
+  */
+  width: 25rem; 
+  background: #fff;
+  border: 1px solid #E4E6E8;
+  border-radius: 2rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hotel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 407/326;
+  overflow: hidden;
+}
+
+.hotel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hotel-favorite-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5625rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.82);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hotel-favorite-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+.hotel-favorite-btn svg {
+  width: 20px;
+  height: 18px;
+}
+
+.hotel-rating-badge {
+  position: absolute;
+  top: 18.125rem;
+  left: 18rem;
+  z-index: 10;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 0.8125rem;
+  background: #fff;
+  border: 1px solid #E4E6E8;
+  border-radius: 50px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.07);
+  white-space: nowrap;
+}
+
+.hotel-rating-badge svg {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.rating-number {
+  color: #000;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.375rem;
+}
+
+.rating-reviews {
+  color: #737373;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.375rem;
+}
+
+.hotel-content {
+  padding: 2.625rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hotel-title {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 2rem;
+  margin: 0;
+}
+
+.hotel-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #737373;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.625rem;
+}
+
+.hotel-location svg {
+  width: 12px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.hotel-stars {
+  display: flex;
+  gap: 0.25rem;
+  margin: 0.5rem 0;
+}
+
+.hotel-stars svg {
+  width: 14px;
+  height: 14px;
+}
+
+.hotel-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.hotel-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.hotel-price-amount {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 2rem;
+}
+
+.hotel-price-label {
+  color: #737373;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.625rem;
+}
+
+.hotel-book-btn {
+  padding: 0.5625rem 1.1875rem;
+  background: #F2F4F6;
+  border: 1px solid #E4E6E8;
+  border-radius: 50px;
+  color: #000;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.375rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hotel-book-btn:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+@media (min-width: 768px) {
+  .hotels-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hotels-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .top-rated-hotels {
+    padding: 6rem 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hotels-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hotels-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  .hotels-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .hotels-header {
+    margin-bottom: 2rem;
+  }
+
+  .hotels-carousel-controls {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .top-rated-hotels {
+    padding: 4rem 1rem;
+  }
+
+  .hotels-grid {
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hotels-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .hotels-subtitle {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .hotels-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hotel-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .hotel-content {
+    padding: 2rem 1.5rem 1.5rem;
+  }
+
+  .top-rated-hotels {
+    padding: 3rem 1rem;
+  }
+}
+
+
+
+/*section: Easy Payment*/
+/* General section styling */
+.Easy-payment {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 4rem 1rem; /* Responsive padding */
+}
+
+.section4 {
+  display: flex;
+  width: 100%;
+  max-width: 1248px; /* Max width for content */
+  flex-direction: column;
+  background: #fff;
+  margin: 0 auto;
+}
+
+/* This is the main layout container */
+.background {
+  width: 100%;
+  border-radius: 16px;
+  background: #efefeb;
+  padding: 3rem; /* Padding inside the component */
+  
+  /* Use Flexbox for the layout */
+  display: flex;
+  flex-direction: column; /* Stack on mobile by default */
+  align-items: center;
+  gap: 3rem;
+  box-sizing: border-box;
+}
+
+/* On screens larger than 1024px, go side-by-side */
+@media (min-width: 1024px) {
+  .background {
+    flex-direction: row; /* Side-by-side on desktop */
+    align-items: flex-start;
+    padding: 5rem;
+  }
+}
+
+/* --- 1. Text Content Column --- */
+.payment-text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left */
+  gap: 1.5rem; /* Space between text elements */
+  flex: 1; /* Take up available space */
+  min-width: 280px;
+}
+
+/* Remove all absolute positioning from text elements */
+.background-2 {
+  display: inline-flex; /* Make it only as wide as its content */
+  padding: 0.75rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background: #fff;
+}
+
+.easypayment {
+  /* No special styles needed */
+}
+
+.div {
+  font-family: Manrope, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #000;
+}
+
+.heading-4 {
+  /* No special styles needed */
+}
+
+.luxury-travel-redefined-your-passportto-global-glamour {
+  /* No special styles needed */
+}
+
+.div-2 {
+  font-family: Manrope, sans-serif;
+  font-weight: 800;
+  font-size: 2.25rem; /* 36px */
+  color: #000;
+  line-height: 1.3;
+}
+
+.discoverhowyoucanoffsetyouradventurescarbonemissionsandsupportthesustainableinitiativespracticedbyouroperatorsworldwide {
+  /* No special styles. */
+}
+
+.div-3 {
+  font-family: Manrope, sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem; /* 18px */
+  color: #737373;
+  line-height: 1.6;
+}
+
+/* --- 2. Image Collage Column --- */
+.payment-image-collage {
+  flex: 1; /* Take up available space */
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+}
+
+/* These are the 3 columns of images */
+.payment-image-collage > .paymentpng,
+.payment-image-collage > .container,
+.payment-image-collage > .container-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1; /* Each column takes equal space */
+}
+
+/* Style all images consistently */
+.paymentpng,
+.payment-2-png,
+.payment-3-png,
+.payment-4-png,
+.payment-5-png {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 3.5rem; /* 56px */
+  object-fit: cover;
+}
+
+/* Remove all absolute positioning from images and containers */
+.container,
+.container-2 {
+  padding: 0;
+  width: 100%;
+}
+
+/* ============================ */
+/* Why Travel With Us Section   */
+/* ============================ */
+
+.why-travel-us-section {
+  display: flex;
+  width: 100%;
+  padding: 4rem 1rem; /* Consistent padding */
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+}
+
+.why-travel-us-container {
+  max-width: 1248px; /* Consistent max-width */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem; /* Space between heading, subheading, and boxes */
+}
+
+.why-travel-us-heading {
+  color: #000;
+  text-align: center;
+  font-family: Manrope, sans-serif;
+  font-size: 3.25rem; /* Match other section titles */
+  font-weight: 800;
+  line-height: 1.4; /* Adjusted line-height */
+  margin: 0;
+}
+
+.why-travel-us-subheading {
+  color: #737373;
+  text-align: center;
+  font-family: Manrope, sans-serif;
+  font-size: 1.25rem; /* Match other subtitles */
+  font-weight: 500;
+  line-height: 1.6; /* Adjusted line-height */
+  margin: 0 0 2rem 0; /* Add bottom margin */
+  max-width: 500px; /* Limit width */
+}
+
+.info-boxes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+  gap: 1.5rem; /* Space between boxes */
+  width: 100%;
+  margin-bottom: 4rem; /* Space before logos */
+}
+
+.info-box {
+  display: flex;
+  padding: 2rem 1.5rem; /* Adjusted padding */
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to top */
+  align-items: center;
+  gap: 0.75rem; /* Reduced gap */
+  border-radius: 16px;
+  text-align: center;
+  min-height: 280px; /* Ensure boxes have similar height */
+}
+
+/* Background colors for each box */
+.security-box { background: #e4f9f9; }
+.support-box { background: #fcf2fa; }
+.policy-box { background: #e3f0ff; }
+.reputation-box { background: #f6f3fc; }
+
+.info-box-icon-wrapper {
+  display: flex;
+  height: 64px;
+  width: 64px; /* Fixed size */
+  padding: 1rem; /* Adjust padding as needed */
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 6px 22px 0 rgba(0, 0, 0, 0.09);
+  margin-bottom: 0.5rem; /* Space below icon */
+}
+
+.info-box-icon {
+  flex-shrink: 0;
+  /* Removed absolute positioning and inline styles */
+  /* Size is controlled by width/height attributes in SVG */
+}
+
+.info-box-title {
+  color: #000;
+  font-family: Manrope, sans-serif;
+  font-size: 1.25rem; /* 20px */
+  font-weight: 700;
+  line-height: 1.6; /* 32px */
+  margin: 0;
+}
+
+.info-box-text {
+  color: #737373;
+  font-family: Manrope, sans-serif;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  line-height: 1.57; /* 22px */
+  margin: 0;
+  max-width: 230px; /* Limit text width */
+  flex-grow: 1; /* Allow text to push link down */
+}
+
+.info-box-link {
+  display: inline-flex; /* Use inline-flex */
+  height: 22px;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem; /* Consistent gap */
+  color: #000;
+  font-family: Manrope, sans-serif;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  line-height: 1.57; /* 22px */
+  text-decoration: none;
+  margin-top: auto; /* Push link to the bottom */
+  transition: gap 0.2s ease;
+}
+
+.info-box-link:hover {
+    gap: 0.75rem; /* Slightly move arrow on hover */
+}
+
+.arrow-icon {
+  width: 11px;
+  height: 10px;
+  /* Removed absolute positioning */
+}
+
+.payment-logos-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
+  justify-content: center; /* Center logos */
+  align-items: center;
+  gap: 2rem 3rem; /* Row and column gap */
+  width: 100%;
+  max-width: 1200px; /* Limit container width if needed */
+  margin: 0 auto; /* Center container */
+}
+
+.payment-logo {
+  height: 28px; /* Consistent height for logos */
+  width: auto; /* Maintain aspect ratio */
+  max-width: 140px; /* Prevent logos from getting too large */
+  object-fit: contain;
+}
+
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 1024px) {
+  .info-boxes-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+
+   .why-travel-us-heading {
+      font-size: 2.5rem; /* Adjust heading size */
+   }
+
+   .why-travel-us-subheading {
+      font-size: 1.125rem; /* Adjust subheading size */
+   }
+}
+
+@media (max-width: 768px) {
+    .why-travel-us-section {
+        padding: 3rem 1rem; /* Reduce padding */
+    }
+
+    .info-boxes-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+        gap: 1rem; /* Reduce gap */
+    }
+
+    .info-box {
+        min-height: auto; /* Remove fixed height */
+        padding: 1.5rem;
+    }
+
+    .payment-logos-container {
+        gap: 1.5rem 2rem; /* Reduce logo gap */
+    }
+
+     .payment-logo {
+        height: 24px; /* Slightly smaller logos */
+     }
+}
+
+@media (max-width: 480px) {
+    .why-travel-us-heading {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    .why-travel-us-subheading {
+        font-size: 1rem; /* Adjust subheading size */
+    }
+}
+
+
+/* ============================ */
+/* Recent Launched Car Section  */
+/* ============================ */
+
+/* --- Section Container --- */
+.recent-cars-section {
+    width: 100%;
+    /* Reusing background color from your original CSS for this section */
+    background: #e4f9f9; 
+    padding: 4rem 1rem 0; /* Top/Horiz padding, NO bottom padding yet */
+    box-sizing: border-box; 
+    overflow: hidden; /* Prevent horizontal scrollbar on body if container overflows slightly */
+}
+
+/* --- Centered Content Wrapper --- */
+.recent-cars-content-wrapper {
+    max-width: 1248px; /* Consistent max-width */
+    margin: 0 auto; /* Center the content */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Reduced space between header and cards */
+}
+
+/* --- Section Header --- */
+.recent-cars-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 2rem;
+    flex-wrap: wrap; 
+    padding: 0 0.5rem; /* Add slight horizontal padding if needed */
+}
+
+.recent-cars-header-text {
+    flex: 1; 
+    min-width: 280px;
+}
+
+.recent-cars-title {
+    color: #000;
+    font-family: Manrope, sans-serif;
+    font-size: 3.25rem; 
+    font-weight: 800;
+    line-height: 1.4;
+    margin: 0 0 0.5rem 0;
+}
+
+.recent-cars-subtitle {
+    color: #737373;
+    font-family: Manrope, sans-serif;
+    font-size: 1.25rem; 
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.recent-cars-nav-buttons {
+    display: flex;
+    gap: 0.75rem; 
+    margin-top: 0.5rem; 
+    flex-shrink: 0; 
+}
+
+.recent-cars-nav-btn {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 0; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; 
+    background: #e4e6e8;
+    border: none; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.recent-cars-nav-btn:hover {
+    background: #d0d2d4; 
+}
+
+.nav-icon { 
+    width: 16px;
+    height: 16px;
+    stroke: black; 
+}
+
+
+/* --- Horizontal Scrolling Car Card Container --- */
+.recent-cars-cards-container {
+    display: flex;
+    gap: 1.5rem; /* 24px gap */
+    overflow-x: auto; 
+    padding: 1.25rem 0.5rem 2rem 0.5rem; /* Adjust padding for scrollbar visibility */
+    margin: 0 -0.5rem; /* Negative margin to allow cards to reach edges */
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: thin; 
+    scrollbar-color: #ccc #f0f0f0; 
+}
+.recent-cars-cards-container::-webkit-scrollbar { height: 8px; }
+.recent-cars-cards-container::-webkit-scrollbar-track { background: #f0f0f0; border-radius: 4px; }
+.recent-cars-cards-container::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+.recent-cars-cards-container::-webkit-scrollbar-thumb:hover { background: #aaa; }
+
+
+/* --- Individual Car Card --- */
+.car-card {
+    width: 403px; 
+    flex-shrink: 0; 
+    border-radius: 32px;
+    border: 1px solid #e4e6e8;
+    background: #fff;
+    position: relative; 
+    display: flex; 
+    flex-direction: column; 
+    overflow: hidden; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Optional subtle shadow */
+}
+
+.car-card-image-wrapper {
+    width: 100%; 
+    aspect-ratio: 401 / 326; 
+    position: relative; 
+    overflow: hidden; 
+}
+
+.car-card-image {
+    display: block; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.car-card-favorite-btn {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    padding: 6px; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; 
+    background: rgba(255, 255, 255, 0.82);
+    position: absolute;
+    right: 1.25rem; /* 20px */
+    top: 1.25rem; /* 20px */
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.car-card-favorite-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+.heart-icon { width: 20px; height: 18px; }
+
+/* --- Car Card Content Area --- */
+.car-card-content {
+    background: #fff;
+    position: relative; 
+    padding: 2.5rem 2rem 2rem; /* ~40px top, 32px sides/bottom */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Space between title, location */
+    flex-grow: 1; 
+}
+
+.car-card-rating-badge {
+    display: inline-flex; 
+    height: 36px;
+    padding: 0 0.8125rem; /* 0 13px */
+    align-items: center;
+    gap: 0.375rem; /* 6px */
+    border-radius: 50px;
+    border: 1px solid #e4e6e8;
+    background: #fff;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.07);
+    position: absolute;
+    top: -18px; /* Half of height to overlap */
+    /* Adjust left/right positioning based on design preference */
+    left: 50%; 
+    transform: translateX(-50%); 
+    /* Or use: left: 2rem; */
+    white-space: nowrap; 
+}
+
+.rating-star { width: 12px; height: 12px; flex-shrink: 0; }
+
+.car-card-rating-text {
+    color: #737373;
+    font-family: Manrope, sans-serif;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 500;
+    line-height: 1.57; /* 22px */
+}
+
+/* rating-value-alt and rating-reviews-alt classes are reused from previous section */
+
+.car-card-title {
+    font-family: Manrope, sans-serif;
+    font-weight: 800; /* Original used 800 */
+    font-size: 1.5rem; /* 24px */
+    line-height: 1.33; /* 32px */
+    color: #000;
+    margin: 0; 
+}
+
+.car-card-location { display: flex; align-items: center; gap: 0.5rem; } /* 8px */
+.location-icon { width: 12px; height: 16px; flex-shrink: 0; }
+
+.car-card-location-text {
+    font-family: Manrope, sans-serif;
+    font-weight: 500; /* Original used 500 */
+    font-size: 1rem; /* 16px */
+    line-height: 1.625; /* 26px */
+    color: #737373;
+    margin: 0;
+}
+
+.car-details-divider {
+    border-top: 1px solid #e4e6e8;
+    margin: 1.5rem 0; /* ~24px top/bottom margin */
+}
+
+.car-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 1rem 0.5rem; /* Row gap, Column gap */
+    margin-bottom: 1.5rem; /* Space before footer */
+}
+
+.car-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* ~12px space between icon and text */
+}
+
+.car-detail-item svg { /* Common style for detail icons */
+    flex-shrink: 0;
+    /* Sizes are set inline or via specific classes */
+}
+.mile-icon { width: 22px; height: 22px; }
+.automatic-icon { width: 22px; height: 22px; }
+.fuel-icon { width: 16px; height: 16px; }
+.seat-icon { width: 24px; height: 24px; }
+
+
+.car-detail-text {
+    font-family: Manrope, sans-serif;
+    font-weight: 500;
+    font-size: 1rem; /* 16px */
+    line-height: 1.625; /* 26px */
+    color: #000; /* Details text is black */
+    white-space: nowrap;
+}
+
+/* --- Car Card Footer --- */
+.car-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Push to bottom */
+}
+
+.car-card-price { display: flex; align-items: baseline; gap: 0.25rem; }
+
+.car-card-price-amount {
+    font-family: Manrope, sans-serif;
+    font-weight: 800; /* Original used 800 */
+    font-size: 1.5rem; /* 24px */
+    line-height: 1.33; /* 32px */
+    color: #000;
+}
+
+.car-card-price-label {
+    font-family: Manrope, sans-serif;
+    font-weight: 500; /* Original used 500 */
+    font-size: 1rem; /* 16px */
+    line-height: 1.625; /* 26px */
+    color: #737373;
+}
+
+.car-card-book-btn {
+    display: inline-flex; 
+    padding: 0.5625rem 1.1875rem; /* ~9px 19px */
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: 1px solid #e4e6e8;
+    background: #f2f4f6;
+    color: #000;
+    text-align: center;
+    font-family: Manrope, sans-serif;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 700;
+    line-height: 1.57; /* 22px */
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.car-card-book-btn:hover {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+
+/* ============================ */
+/* Search By Category (Brands)  */
+/* ============================ */
+
+.search-by-category {
+    max-width: 1248px; /* Match container width */
+    margin: 4rem auto 0; /* Add top margin, center, no bottom margin (section has padding) */
+    padding: 0 1rem; /* Add horizontal padding */
+    text-align: center; /* Center align title/subtitle */
+}
+
+.search-category-title {
+    font-family: Manrope, sans-serif;
+    font-weight: 800;
+    font-size: 2.25rem; /* 36px */
+    line-height: 1.33; /* 48px */
+    color: #000;
+    margin: 0 0 1rem 0; /* Margin below title */
+}
+
+.search-category-subtitle {
+    font-family: Manrope, sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.6; /* 32px */
+    color: #737373;
+    margin: 0 auto 3rem; /* Center block and add margin below */
+    max-width: 500px; /* Limit width */
+}
+
+.brand-logos-container {
+    display: flex;
+    gap: 1.5rem; /* 24px gap */
+    justify-content: center; /* Center logos horizontally */
+    align-items: center; /* Center logos vertically */
+    flex-wrap: wrap; /* Allow logos to wrap */
+}
+
+.brand-logo-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem; /* ~15px 25px */
+    border-radius: 16px;
+    background: #fff;
+    min-height: 65px; /* Ensure consistent height */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Optional subtle shadow */
+}
+
+.brand-logo-image {
+    height: 28px; /* Fixed height */
+    width: auto; /* Maintain aspect ratio */
+    max-width: 150px; /* Prevent very wide logos from dominating */
+    object-fit: contain; /* Ensure logo fits without distortion */
+}
+
+
+/* --- Responsive Adjustments for Recent Cars & Brands --- */
+
+@media (max-width: 1024px) {
+    .recent-cars-title { font-size: 2.5rem; }
+    .recent-cars-subtitle { font-size: 1.125rem; }
+    .search-category-title { font-size: 2rem; }
+    .search-category-subtitle { font-size: 1.125rem; }
+}
+
+@media (max-width: 768px) {
+    .recent-cars-section { padding: 3rem 1rem 0; }
+    .recent-cars-header { flex-direction: column; align-items: center; text-align: center; }
+    .recent-cars-nav-buttons { margin-top: 1rem; }
+    .car-card { width: 320px; } /* Slightly smaller */
+    .car-card-content { padding: 2rem 1.5rem 1.5rem; }
+    .car-card-rating-badge { right: 1.5rem; }
+    .car-details-grid { gap: 0.75rem 0.5rem; } /* Reduce gap */
+    .car-detail-text { font-size: 0.9375rem; } /* Slightly smaller text */
+
+    .search-by-category { margin-top: 3rem; }
+    .search-category-title { font-size: 1.75rem; }
+    .search-category-subtitle { margin-bottom: 2rem; }
+    .brand-logos-container { gap: 1rem; } /* Reduce gap */
+    .brand-logo-item { padding: 0.75rem 1rem; min-height: 55px; }
+    .brand-logo-image { height: 24px; }
+}
+
+@media (max-width: 480px) {
+    .recent-cars-title { font-size: 2rem; }
+    .recent-cars-subtitle { font-size: 1rem; }
+    .car-card { width: calc(100vw - 2rem); max-width: 300px; } /* Allow card to shrink */
+    .car-card-title { font-size: 1.25rem; }
+    .car-card-price-amount { font-size: 1.25rem; }
+    .car-card-footer { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    .car-card-book-btn { width: 100%; }
+
+    .search-category-title { font-size: 1.5rem; }
+    .search-category-subtitle { font-size: 1rem; }
+    .brand-logos-container { justify-content: space-around; } /* Spread logos a bit more */
+}
+
+/* ============================ */
+/* Testimonials Section         */
+/* ============================ */
+
+.testimonial-section {
+    position: relative;
+    width: 100%;
+    padding: 6rem 1rem;
+    background-color: #fff; /* Base background color */
+    border-bottom: 1px solid #e4e6e8;
+    overflow: hidden;
+}
+
+.testimonial-bg-image-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.1; /* Adjust opacity as needed, or remove */
+}
+
+.testimonial-bg-image-decorator {
+    /* This element is from your original CSS <style> block */
+    background: url("https://api.builder.io/api/v1/image/assets/TEMP/3343c47d6e782fcba42bef8beecdaa8de1e76782?width=3840") no-repeat;
+    background-size: contain; 
+    background-position: right top;
+    position: absolute;
+    top: 10%; /* Adjusted from original */
+    right: 0;
+    width: 36%;
+    height: 19%;
+    z-index: 0;
+    opacity: 0.5; /* Adjust as needed */
+}
+
+.testimonial-content-wrapper {
+    max-width: 1248px;
+    margin: 0 auto;
+    position: relative; /* Ensure content stays above background */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem; /* Space before scroller */
+}
+
+.testimonial-header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem; /* Space between badge and title */
+}
+
+.testimonial-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem; /* Space between avatars and text */
+    padding: 0.5rem 1.25rem 0.5rem 0.75rem; /* Padding */
+    border-radius: 50px;
+    background: #fefa17;
+    border: 1px solid #e4e6e8;
+}
+
+.testimonial-badge-avatars {
+    display: flex;
+}
+
+.testimonial-badge-avatar {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 2px solid #fefa17; /* Border matches badge bg */
+    margin-left: -10px; /* Overlap avatars */
+    object-fit: cover;
+}
+
+.testimonial-badge-avatar:first-child {
+    margin-left: 0;
+}
+
+.testimonial-badge-text {
+    font-family: Manrope, sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem; /* 14px */
+    color: #000;
+}
+
+.testimonial-title {
+    font-family: Manrope, sans-serif;
+    font-weight: 800;
+    font-size: 3.25rem; /* Match other titles */
+    color: #000;
+    line-height: 1.4;
+    max-width: 630px; /* From original */
+    margin: 0;
+}
+
+/* Reusing .recent-cars-nav-buttons and .recent-cars-nav-btn from previous section */
+/* If you want separate controls, rename these classes */
+.testimonial-nav-buttons {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    flex-shrink: 0;
+}
+.testimonial-nav-btn {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #e4e6e8;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.testimonial-nav-btn:hover {
+    background: #d0d2d4;
+}
+.testimonial-nav-btn .nav-icon { /* Ensure icon color is correct */
+    stroke: #000;
+}
+
+
+/* --- Testimonial Cards Scroller --- */
+.testimonial-cards-container {
+    display: flex;
+    gap: 1.5rem; /* 24px */
+    overflow-x: auto;
+    padding: 2rem 0.5rem; /* Top/bottom padding for breathing room */
+    margin: 0 -0.5rem; /* Allow cards to "bleed" slightly */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f0f0f0;
+}
+.testimonial-cards-container::-webkit-scrollbar { height: 8px; }
+.testimonial-cards-container::-webkit-scrollbar-track { background: #f0f0f0; border-radius: 4px; }
+.testimonial-cards-container::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+.testimonial-cards-container::-webkit-scrollbar-thumb:hover { background: #aaa; }
+
+/* --- Individual Testimonial Card --- */
+.testimonial-card {
+    width: 470px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    border: 1px solid #e4e6e8;
+    background: #fff;
+    padding: 2.5rem; /* 40px */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Space between header, quote, author */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.testimonial-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align title left, stars right */
+}
+
+.testimonial-card-title {
+    font-family: Manrope, sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem; /* 20px */
+    color: #000;
+    line-height: 1.6; /* 32px */
+    margin: 0;
+}
+
+.testimonial-card-stars {
+    display: flex;
+    gap: 2px;
+    flex-shrink: 0;
+    padding-top: 0.5rem; /* Align better with title */
+}
+
+.star-icon {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+}
+
+.testimonial-card-quote {
+    font-family: Manrope, sans-serif;
+    font-weight: 400; /* Original used 400 */
+    font-size: 0.875rem; /* 14px */
+    color: #737373;
+    line-height: 1.7; /* 24px */
+    margin: 0;
+    flex-grow: 1; /* Pushes author info to the bottom */
+}
+
+.testimonial-card-author-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* 16px */
+    margin-top: 1rem; /* Space above author */
+}
+
+.testimonial-author-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.testimonial-author-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-author-name {
+    font-family: Manrope, sans-serif;
+    font-weight: 700;
+    font-size: 1.125rem; /* 18px */
+    color: #000;
+    line-height: 1.55; /* 28px */
+}
+
+.testimonial-author-location {
+    font-family: Manrope, sans-serif;
+    font-weight: 500; /* Original used 500 */
+    font-size: 0.875rem; /* 14px */
+    color: #000; /* Original was black */
+    line-height: 1.57; /* 22px */
+}
+
+
+/* --- Responsive Adjustments for Testimonials --- */
+@media (max-width: 1024px) {
+    .testimonial-title { font-size: 2.5rem; }
+    .testimonial-bg-image-decorator { display: none; } /* Hide complex BG decor */
+}
+
+@media (max-width: 768px) {
+    .testimonial-section { padding: 3rem 1rem; }
+    .testimonial-header { flex-direction: column; align-items: center; text-align: center; }
+    .testimonial-header-text { align-items: center; }
+    .testimonial-title { font-size: 2.25rem; }
+    .testimonial-nav-buttons { margin-top: 1rem; }
+    .testimonial-cards-container { margin: 1rem -1rem; padding: 1rem; }
+    .testimonial-card { width: calc(100vw - 4rem); max-width: 400px; padding: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+    .testimonial-title { font-size: 2rem; }
+    .testimonial-card { width: calc(100vw - 3rem); max-width: 320px; }
+    .testimonial-card-header { flex-direction: column-reverse; gap: 0.5rem; }
+    .testimonial-card-stars { padding-top: 0; }
+    .testimonial-card-title { font-size: 1.125rem; }
+    .testimonial-card-quote { font-size: 0.875rem; }
+    .testimonial-author-avatar { width: 48px; height: 48px; }
+    .testimonial-author-name { font-size: 1rem; }
+}
+
+
+/* ============================ */
+/* News, Tips & Guides Section  */
+/* ============================ */
+
+.news-section {
+    display: flex;
+    width: 100%;
+    padding: 4rem 1rem; /* Consistent padding */
+    justify-content: center;
+    align-items: center;
+    background: #fff; /* White background for this section */
+    box-sizing: border-box;
+}
+
+.news-content-wrapper {
+    max-width: 1248px; /* Consistent max-width */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* Space between header and grid */
+}
+
+/* --- Section Header --- */
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.news-header-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.news-title {
+    color: #000;
+    font-family: Manrope, sans-serif;
+    font-size: 3.25rem; /* Match other titles */
+    font-weight: 800;
+    line-height: 1.4;
+    margin: 0 0 0.5rem 0;
+}
+
+.news-subtitle {
+    color: #737373;
+    font-family: Manrope, sans-serif;
+    font-size: 1.25rem; /* Match other subtitles */
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Reusing .view-more-btn and .arrow-icon-white styles from previous section */
+/* No need to redefine if they are identical */
+
+
+/* --- News Cards Grid --- */
+.news-cards-grid {
+    display: grid;
+    /* 3 columns, auto-fitting, min width 320px */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 1.875rem; /* 30px gap */
+    width: 100%;
+}
+
+.news-card {
+    border-radius: 32px;
+    border: 1px solid #e4e6e8;
+    background: #fff;
+    position: relative; /* Context for absolute positioning inside */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Clip image corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.news-card-image-wrapper {
+    width: 100%;
+    aspect-ratio: 386 / 312; /* Maintain aspect ratio */
+    position: relative; /* For labels and buttons */
+    overflow: hidden;
+}
+
+.news-card-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-card-category-label {
+    display: inline-block; /* Allows padding */
+    padding: 0.5rem 1.125rem; /* ~8px 18px */
+    border-radius: 50px;
+    background: #fff;
+    color: #000;
+    font-family: Manrope, sans-serif;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 700;
+    line-height: 1.57; /* 22px */
+    position: absolute;
+    left: 1.25rem; /* 20px */
+    top: 1.25rem; /* 20px */
+}
+
+/* Reusing .heart-icon styles if defined previously */
+/* Style for favorite button positioning */
+.news-card-favorite-btn {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    padding: 6px; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Circular */
+    background: rgba(255, 255, 255, 0.82);
+    position: absolute;
+    right: 1.25rem; /* 20px */
+    top: 1.25rem; /* 20px */
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.news-card-favorite-btn:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+}
+
+/* --- News Card Content --- */
+.news-card-content {
+    background: #fff;
+    padding: 1.5rem 2rem 2rem; /* ~24px top, 32px sides/bottom */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allow content to fill space */
+    gap: 0.75rem; /* Space between elements */
+}
+
+.news-card-metadata {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 1.25rem; /* 20px space between items */
+    margin-bottom: 0.5rem; /* Space below metadata */
+}
+
+.metadata-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem; /* 4px space between icon and text */
+}
+
+.metadata-item svg { /* Common style for metadata icons */
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+}
+/* Specific icon classes already provided (calendar-icon, time-icon, comment-icon) */
+
+.metadata-text {
+    color: #000; /* Text color is black in original */
+    font-family: Manrope, sans-serif;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 500;
+    line-height: 1.57; /* 22px */
+    white-space: nowrap;
+}
+
+
+.news-card-title {
+    color: #000;
+    font-family: Manrope, sans-serif;
+    font-size: 1.25rem; /* 20px */
+    font-weight: 700;
+    line-height: 1.6; /* 32px */
+    margin: 0;
+    flex-grow: 1; /* Allow title to push footer down */
+}
+
+.news-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem; /* Space above footer */
+    gap: 1rem;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* 12px */
+}
+
+.author-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.author-name {
+    color: #000;
+    font-family: Manrope, sans-serif;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 700;
+    line-height: 1.57; /* 22px */
+    white-space: nowrap;
+}
+
+.keep-reading-btn {
+    display: inline-flex;
+    padding: 0.5625rem 1.1875rem; /* ~9px 19px */
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: 1px solid #e4e6e8;
+    background: #f2f4f6;
+    color: #000;
+    text-align: center;
+    font-family: Manrope, sans-serif;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 700;
+    line-height: 1.57; /* 22px */
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    white-space: nowrap;
+}
+.keep-reading-btn:hover {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+
+/* --- Responsive Adjustments for News Section --- */
+
+@media (max-width: 1024px) {
+    .news-title { font-size: 2.5rem; }
+    .news-subtitle { font-size: 1.125rem; }
+    .news-cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Allow slightly smaller cards */
+    }
+}
+
+@media (max-width: 768px) {
+    .news-section { padding: 3rem 1rem; }
+    .news-header { flex-direction: column; align-items: center; text-align: center; }
+    .news-title { font-size: 2.25rem; }
+    .news-subtitle { font-size: 1.125rem; }
+    .view-more-btn { margin-top: 1rem; }
+    .news-cards-grid { gap: 1.5rem; }
+    .news-card-content { padding: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+    .news-title { font-size: 2rem; }
+    .news-subtitle { font-size: 1rem; }
+    .news-card-title { font-size: 1.125rem; line-height: 1.5; }
+    .news-card-footer { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+    .keep-reading-btn { width: 100%; }
+}
+
+
+/* ============================ */
+/* Footer Section               */
+/* ============================ */
+
+.site-footer {
+    position: relative; /* For background image positioning */
+    width: 100%;
+    background: #000;
+    color: #8e8e8e; /* Default text color in footer */
+    padding: 2rem 1rem 0; /* Add padding, no bottom padding yet */
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent decorators from spilling */
+}
+
+.footer-bg-image-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.1; /* Adjust as needed */
+}
+
+.footer-bg-image-decorator {
+    /* This element is from your original CSS <style> block */
+    background: url("https://api.builder.io/api/v1/image/assets/TEMP/3343c47d6e782fcba42bef8beecdaa8de1e76782?width=3840") no-repeat;
+    background-size: contain; 
+    background-position: right top;
+    position: absolute;
+    top: 10%; 
+    right: 0;
+    width: 36%;
+    height: 19%;
+    z-index: 0;
+    opacity: 0.2; /* Adjust as needed */
+}
+
+.footer-content-wrapper {
+    max-width: 1248px;
+    margin: 0 auto;
+    position: relative; /* Stays on top of background images */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Subscribe Banner --- */
+.footer-subscribe-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 2rem;
+    padding: 2.5rem 0.5rem; /* ~36px vertical */
+    border-bottom: 1px solid rgba(87, 86, 86, 0.49);
+}
+
+.subscribe-title {
+    font-family: Manrope, sans-serif;
+    font-weight: 800;
+    font-size: 1.75rem; /* 28px */
+    color: #fff;
+    line-height: 1.28; /* 36px */
+    margin: 0;
+    flex: 1;
+    min-width: 300px; /* Prevent shrinking too much */
+    max-width: 500px; /* Max width */
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 0.5rem; /* 9px */
+    flex: 1;
+    min-width: 320px; /* Prevent shrinking too much */
+    max-width: 505px;
+}
+
+.subscribe-input-wrapper {
+    position: relative;
+    flex-grow: 1; /* Take remaining space */
+}
+
+.subscribe-email-icon {
+    position: absolute;
+    left: 1.5rem; /* 24px */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 12px;
+    pointer-events: none; /* Make icon unclickable */
+}
+
+.subscribe-input {
+    width: 100%;
+    height: 58px; /* Match original */
+    border-radius: 100px;
+    border: 1px solid #737373;
+    background: #000;
+    padding: 0 1rem 0 3.5rem; /* top/right/bottom/left */
+    color: #fff;
+    font-family: Urbanist, sans-serif;
+    font-size: 1rem; /* 16px */
+}
+
+.subscribe-button {
+    height: 58px;
+    padding: 0 1.5rem; /* ~23px horizontal */
+    border-radius: 50px;
+    background: #fefa17;
+    color: #000;
+    font-family: Manrope, sans-serif;
+    font-weight: 700;
+    font-size: 1rem; /* 16px */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.subscribe-button:hover {
+    background: #e5e100; /* Darker yellow */
+}
+
+
+/* --- Main Footer Grid --- */
+.footer-main-content {
+    display: grid;
+    grid-template-columns: 2fr repeat(4, 1fr); /* 5 columns, first is wider */
+    gap: 2.5rem 1.5rem; /* Row, Column gap */
+    padding: 3rem 0.5rem;
+}
+
+.footer-contact-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Space between logo, address, phone */
+}
+
+.footer-logo {
+    display: block;
+    width: 173px;
+    height: auto;
+}
+.footer-logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.footer-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Space between address items */
+    font-style: normal; /* Remove italics from <address> */
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start; /* Align icon with first line of text */
+    gap: 0.75rem; /* 12px */
+}
+.contact-item svg {
+    flex-shrink: 0;
+    margin-top: 4px; /* Align icon nicely */
+}
+
+.contact-text,
+.contact-text-light {
+    font-family: Manrope, sans-serif;
+    font-weight: 500; /* Original used 500 */
+    font-size: 1rem; /* 16px */
+    line-height: 1.625; /* 26px */
+    color: #8e8e8e;
+}
+
+.contact-text-light {
+    color: #fff; /* For "Need help?" */
+}
+
+.footer-phone-support {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.phone-number {
+    font-family: Manrope, sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem; /* 24px */
+    color: #f09814;
+    text-decoration: none;
+    line-height: 1.33; /* 32px */
+}
+
+.footer-links-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem; /* Space between title and list */
+}
+
+.footer-links-title {
+    color: #fff;
+    font-family: Manrope, sans-serif;
+    font-size: 1.125rem; /* 18px */
+    font-weight: 500;
+    line-height: 1.55; /* 28px */
+    margin: 0;
+}
+
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* ~12-18px */
+}
+
+.footer-links-list li a {
+    color: #8e8e8e;
+    text-decoration: none;
+    font-family: Manrope, sans-serif;
+    font-size: 1rem; /* 16px */
+    font-weight: 400;
+    line-height: 1.625; /* 26px */
+    transition: color 0.3s ease;
+}
+
+.footer-links-list li a:hover {
+    color: #fff;
+}
+
+
+/* --- Copyright Bar --- */
+.footer-copyright-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border-top: 1px solid rgba(87, 86, 86, 0.49);
+    padding: 2.5rem 0.5rem; /* ~40px vertical */
+}
+
+.copyright-text {
+    color: #fff;
+    font-family: Manrope, sans-serif;
+    font-size: 0.875rem; /* 14px */
+    font-weight: 500;
+    line-height: 1.57; /* 22px */
+    margin: 0;
+}
+
+.footer-social-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* 16px */
+}
+
+.social-links-text {
+    color: #fff;
+    font-family: Manrope, sans-serif;
+    font-size: 1.125rem; /* 18px */
+    font-weight: 700;
+    line-height: 1.55; /* 28px */
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    border: 1px solid #575756;
+    background: #000;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.social-link:hover {
+    background-color: #222;
+    border-color: #888;
+}
+
+.social-icon {
+    /* Sizes are set by their viewBox and width/height attributes in the SVG */
+    /* We can standardize if needed, e.g. width: 20px; height: 20px; */
+    fill: white;
+}
+
+
+/* --- Responsive Adjustments for Footer --- */
+
+@media (max-width: 1024px) {
+    .footer-main-content {
+        grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+        /* Contact column will span, link columns will wrap */
+    }
+    .footer-contact-column {
+        grid-column: 1 / -1; /* Span full width */
+        align-items: center; /* Center contact info */
+    }
+    .footer-contact-info {
+        flex-direction: row; /* Put contact items side-by-side */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem 2.5rem;
+    }
+    .footer-phone-support {
+        align-items: center;
+    }
+    .footer-links-column {
+        align-items: center; /* Center link lists */
+    }
+    .footer-links-list {
+        align-items: center; /* Center link items */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-subscribe-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    .subscribe-form {
+        width: 100%;
+        max-width: 100%;
+    }
+    .footer-main-content {
+        grid-template-columns: 1fr 1fr; /* 2 columns */
+    }
+    .footer-contact-info {
+        flex-direction: column; /* Stack contact items again */
+        align-items: center;
+        gap: 1rem;
+    }
+    .footer-copyright-bar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-main-content {
+        grid-template-columns: 1fr; /* 1 column */
+        text-align: center;
+    }
+    .footer-links-column {
+        align-items: center;
+    }
+    .subscribe-form {
+        flex-direction: column; /* Stack input and button */
+        gap: 1rem;
+    }
+    .subscribe-button {
+        width: 100%;
+        height: 54px; /* Match input */
+    }
+    .subscribe-input {
+        height: 54px;
+    }
+}
